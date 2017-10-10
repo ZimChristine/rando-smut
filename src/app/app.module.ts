@@ -5,6 +5,10 @@ import { GeneratorService } from './generator/generator.service';
 import { ParserService } from './generator/common/parser.service';
 import { CompilerService } from './generator/common/compiler.service';
 
+import { appSentences, SentencesInjectable } from './generator/common/content/sentences';
+import { appVocabulary, VocabInjectable } from './generator/common/content/vocabulary';
+import { appGrammar, GrammarInjectable } from './generator/common/content/grammar';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -18,6 +22,9 @@ import { AppComponent } from './app.component';
     GeneratorService,
     ParserService,
     CompilerService,
+    { provide: GrammarInjectable, useValue: appGrammar },
+    { provide: VocabInjectable, useValue: appVocabulary },
+    { provide: SentencesInjectable, useValue: appSentences },
   ],
   bootstrap: [AppComponent]
 })

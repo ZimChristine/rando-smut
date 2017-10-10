@@ -1,10 +1,12 @@
 import { Token, TokenType } from './common/token.model';
 
 const testSentence: {
+  generatorArray: Array<string>,
   testString: string,
   testAST: Token,
   testResult: string,
 } = {
+  generatorArray: ['this sentence has <token>s that should be <parse>d'],
   testString: 'this sentence has <token>s that should be <parse>d',
   testAST: new Token(TokenType.SENTENCE),
   testResult: 'this sentence has tokens that should be parsed',

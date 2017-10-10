@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 
 import { Token, TokenType } from './token.model';
-import { appGrammar } from './content/grammar';
+import { appGrammar, GrammarInjectable } from './content/grammar';
 
 @Injectable()
 export class ParserService {
   private _grammar: object;
 
-  public constructor(grammar: object = appGrammar) {
+  public constructor(@Inject(GrammarInjectable) grammar: object) {
     this._grammar = grammar;
   }
 
