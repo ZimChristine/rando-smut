@@ -9,6 +9,6 @@ RandoSmut is a project to play with Angular and parsing whilst amusing myself de
 
 ## Roadmap
 
-1. [ ] Set up skeleton files and tests for generator;
+1. [x] Set up skeleton files and tests for generator;
 2. [ ] Add lots of sentences, phrases and grammar;
 3. [ ] Add usable front end.
