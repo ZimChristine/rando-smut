@@ -6,66 +6,58 @@ const testSentence: {
   testResult: string,
 } = {
   testString: 'this sentence has <token>s that should be <parse>d',
-  testAST: <Token>{
-    type: TokenType.SENTENCE,
-    components: <Token[]>[
+  testAST: new Token(TokenType.SENTENCE),
+  testResult: 'this sentence has tokens that should be parsed',
+}
+
+testSentence.testAST.components = [
+  <Token>{
+    type: TokenType.TEXT,
+    value: 'this sentence has ',
+  },
+  <Token>{
+    type: TokenType.BNF,
+    value: 'token',
+    bnfTerminal: false,
+    components: [
       <Token>{
-        type: TokenType.TEXT,
-        value: 'this sentence has ',
-        components: [],
+        type: TokenType.BNF,
+        value: 'final',
+        bnfTerminal: true,
       },
       <Token>{
         type: TokenType.BNF,
-        value: 'token',
-        bnfTerminal: false,
-        components: [
-          <Token>{
-            type: TokenType.BNF,
-            value: 'final',
-            bnfTerminal: true,
-            components: [],
-          },
-          <Token>{
-            type: TokenType.BNF,
-            value: 'expression',
-            bnfTerminal: true,
-            components: [],
-          }
-        ],
-      },
-      <Token>{
-        type: TokenType.TEXT,
-        value: 's that should be ',
-        components: [],
-      },
-      <Token>{
-        type: TokenType.BNF,
-        value: 'parse',
-        bnfTerminal: false,
-        components: [
-          <Token>{
-            type: TokenType.BNF,
-            value: 'another',
-            bnfTerminal: true,
-            components: [],
-          },
-          <Token>{
-            type: TokenType.BNF,
-            value: 'example',
-            bnfTerminal: true,
-            components: [],
-          }
-        ],
-      },
-      <Token>{
-        type: TokenType.TEXT,
-        value: 'd',
-        components: [],
+        value: 'expression',
+        bnfTerminal: true,
       }
     ],
   },
-  testResult: 'this sentence has tokens that should be parsed',
-}
+  <Token>{
+    type: TokenType.TEXT,
+    value: 's that should be ',
+  },
+  <Token>{
+    type: TokenType.BNF,
+    value: 'parse',
+    bnfTerminal: false,
+    components: [
+      <Token>{
+        type: TokenType.BNF,
+        value: 'another',
+        bnfTerminal: true,
+      },
+      <Token>{
+        type: TokenType.BNF,
+        value: 'example',
+        bnfTerminal: true,
+      }
+    ],
+  },
+  <Token>{
+    type: TokenType.TEXT,
+    value: 'd',
+  }
+]
 
 const testGrammar = {
   token: ['[final][expression]'],
