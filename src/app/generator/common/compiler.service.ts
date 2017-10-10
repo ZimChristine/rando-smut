@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+
+import { appVocabulary } from './content/vocabulary';
 import { Token, TokenType } from './token.model';
 
 @Injectable()
 export class CompilerService {
   private _vocab: object;
 
-  public constructor(vocab: object) {
+  public constructor(vocab: object = appVocabulary) {
     this._vocab = vocab;
   }
 
