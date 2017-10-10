@@ -33,7 +33,12 @@ describe('Fiction copmonent', () => {
 
   it('has erotic fiction', () => {
     const fixture = TestBed.createComponent(FictionComponent);
-    const fiction = fixture.debugElement.nativeElement;
-    expect(fiction.querySelector('#fiction').textContent).toContain('test');
+    expect(fixture.componentInstance.smut).toBe(testContent.testSentence.testResult);
+  });
+
+  it('displays erotic fiction', () => {
+    const fixture = TestBed.createComponent(FictionComponent);
+    const fictionComp = fixture.debugElement.nativeElement;
+    expect(fictionComp.querySelector('#fiction').textContent).toContain(testContent.testSentence.testResult);
   });
 });

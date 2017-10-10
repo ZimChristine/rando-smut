@@ -10,7 +10,6 @@ export class FictionComponent {
   public smut: string;
 
   constructor(private _fictionGenerator: GeneratorService) {
-    // this.smut = _fictionGenerator.getSmut();
-    this.smut = 'erotic fiction goes here';
+    this.smut = _fictionGenerator.getSmut();
   }
 };
