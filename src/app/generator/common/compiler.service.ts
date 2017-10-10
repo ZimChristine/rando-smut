@@ -25,6 +25,6 @@ export class CompilerService {
       }
       // Recursive step -- Non-terminal BNF
       return acc + this.compileSmut(token);
-    }, ast.value || '');
+    }, (ast.type == TokenType.TEXT && ast.value) || '');
   }
 }
