@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 
 import { FictionComponent } from './fiction.component';
 import { GeneratorService } from './generator';
@@ -39,6 +39,7 @@ describe('Fiction copmonent', () => {
   it('displays erotic fiction', () => {
     const fixture = TestBed.createComponent(FictionComponent);
     const fictionComp = fixture.debugElement.nativeElement;
+    fixture.detectChanges();
     expect(fictionComp.querySelector('#fiction').textContent).toContain(testContent.testSentence.testResult);
   });
 });
