@@ -10,10 +10,12 @@ import { appVocabulary, VocabInjectable } from './generator/common/content/vocab
 import { appGrammar, GrammarInjectable } from './generator/common/content/grammar';
 
 import { AppComponent } from './app.component';
+import { FictionComponent } from './fiction.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FictionComponent,
   ],
   imports: [
     BrowserModule
