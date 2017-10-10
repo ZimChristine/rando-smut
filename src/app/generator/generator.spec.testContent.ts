@@ -1,31 +1,31 @@
-import { IToken, TokenType } from './common/token.model';
+import { Token, TokenType } from './common/token.model';
 
 const testSentence: {
   testString: string,
-  testAST: IToken,
+  testAST: Token,
   testResult: string,
 } = {
   testString: 'this sentence has <token>s that should be <parse>d',
-  testAST: <IToken>{
+  testAST: <Token>{
     type: TokenType.SENTENCE,
-    components: <IToken[]>[
-      {
+    components: <Token[]>[
+      <Token>{
         type: TokenType.TEXT,
         value: 'this sentence has ',
         components: [],
       },
-      {
+      <Token>{
         type: TokenType.BNF,
         value: 'token',
         bnfTerminal: false,
         components: [
-          {
+          <Token>{
             type: TokenType.BNF,
             value: 'final',
             bnfTerminal: true,
             components: [],
           },
-          {
+          <Token>{
             type: TokenType.BNF,
             value: 'expression',
             bnfTerminal: true,
@@ -33,23 +33,23 @@ const testSentence: {
           }
         ],
       },
-      {
+      <Token>{
         type: TokenType.TEXT,
         value: 's that should be ',
         components: [],
       },
-      {
+      <Token>{
         type: TokenType.BNF,
         value: 'parse',
         bnfTerminal: false,
         components: [
-          {
+          <Token>{
             type: TokenType.BNF,
             value: 'another',
             bnfTerminal: true,
             components: [],
           },
-          {
+          <Token>{
             type: TokenType.BNF,
             value: 'example',
             bnfTerminal: true,
@@ -57,7 +57,7 @@ const testSentence: {
           }
         ],
       },
-      {
+      <Token>{
         type: TokenType.TEXT,
         value: 'd',
         components: [],

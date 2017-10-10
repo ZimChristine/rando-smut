@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IToken, TokenType } from './token.model';
+import { Token, TokenType } from './token.model';
 
 @Injectable()
 export class CompilerService {
@@ -9,7 +9,7 @@ export class CompilerService {
     this._vocab = vocab;
   }
 
-  public compileSmut(ast: IToken): string {
+  public compileSmut(ast: Token): string {
     return '';
   }
 }

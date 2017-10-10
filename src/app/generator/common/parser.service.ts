@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { IToken, TokenType } from './token.model';
+import { Token, TokenType } from './token.model';
 
 @Injectable()
 export class ParserService {
@@ -10,11 +10,16 @@ export class ParserService {
     this._grammar = grammar;
   }
 
-  public parseSmut(str: string): IToken {
-    return {
-      type: TokenType.SENTENCE,
-      value: '',
-      components: [],
+  public parseSmut(str: string, sentence=true): Token {
+    const root: Token = new Token(TokenType.SENTENCE);
+
+    // Iterate through str, adding correct components to root IToken
+    for (const char of str) {
+      if (/[\[<]/.test(char)) {
+
+      }
     }
+
+    return root;
   }
 }
