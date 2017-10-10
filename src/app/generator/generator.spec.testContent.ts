@@ -65,10 +65,10 @@ const testGrammar = {
 };
 
 const testVocabulary = {
-  final: 'tok',
-  expression: 'en',
-  another: 'par',
-  example: 'se',
+  final: ['tok'],
+  expression: ['en'],
+  another: ['par'],
+  example: ['se'],
 };
 
 export default {
