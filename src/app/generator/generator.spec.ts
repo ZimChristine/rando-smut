@@ -5,9 +5,9 @@ import { CompilerService } from './common/compiler.service';
 import testContent from './generator.spec.testContent';
 
 describe('Generator', () => {
-  let generator: GeneratorService = new GeneratorService();
   let parser: ParserService = new ParserService(testContent.testGrammar);
   let compiler: CompilerService = new CompilerService(testContent.testVocabulary);
+  let generator: GeneratorService = new GeneratorService(parser, compiler);
 
   it('should correctly parse a basic string', () => 
     expect(parser.parseSmut(testContent.testSentence.testString)).toEqual(testContent.testSentence.testAST)
