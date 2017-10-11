@@ -12,53 +12,17 @@ const testSentence: {
   testResult: 'this sentence has tokens that should be parsed',
 }
 
+const bnf1 = new Token(TokenType.BNF, 'token', false);
+bnf1.components = [new Token(TokenType.BNF, 'final', true), new Token(TokenType.BNF, 'expression', true)];
+const bnf2 = new Token(TokenType.BNF, 'parse', false);
+bnf2.components = [new Token(TokenType.BNF, 'another', true), new Token(TokenType.BNF, 'example', true)]
+
 testSentence.testAST.components = [
-  <Token>{
-    type: TokenType.TEXT,
-    value: 'this sentence has ',
-  },
-  <Token>{
-    type: TokenType.BNF,
-    value: 'token',
-    bnfTerminal: false,
-    components: [
-      <Token>{
-        type: TokenType.BNF,
-        value: 'final',
-        bnfTerminal: true,
-      },
-      <Token>{
-        type: TokenType.BNF,
-        value: 'expression',
-        bnfTerminal: true,
-      }
-    ],
-  },
-  <Token>{
-    type: TokenType.TEXT,
-    value: 's that should be ',
-  },
-  <Token>{
-    type: TokenType.BNF,
-    value: 'parse',
-    bnfTerminal: false,
-    components: [
-      <Token>{
-        type: TokenType.BNF,
-        value: 'another',
-        bnfTerminal: true,
-      },
-      <Token>{
-        type: TokenType.BNF,
-        value: 'example',
-        bnfTerminal: true,
-      }
-    ],
-  },
-  <Token>{
-    type: TokenType.TEXT,
-    value: 'd',
-  }
+  new Token(TokenType.TEXT, 'this sentence has '),
+  bnf1,
+  new Token(TokenType.TEXT, 's that should be '),
+  bnf2,
+  new Token(TokenType.TEXT, 'd'),
 ]
 
 const testGrammar = {
