@@ -8,7 +8,9 @@ export class CompilerService {
   public constructor(@Inject(VocabInjectable) private _vocab: object) {}
 
   private _getFromVocab(token: string): string {
-    const tokens = this._vocab[token];
+    console.log('token', token);
+    const tokenParts = token.split('-');
+    const tokens = tokenParts.length === 2 ? this._vocab[tokenParts[0]][tokenParts[1]] : this._vocab[tokenParts[0]];
     return tokens[Math.floor(Math.random() * tokens.length)];
   }
 

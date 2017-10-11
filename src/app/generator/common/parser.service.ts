@@ -8,7 +8,9 @@ export class ParserService {
   public constructor(@Inject(GrammarInjectable) private _grammar: object) {}
 
   private _getFromGrammar(token: string): string {
-    const tokens = this._grammar[token];
+    console.log('token', token);
+    const tokenParts = token.split('-');
+    const tokens = tokenParts.length === 2 ? this._grammar[tokenParts[0]][tokenParts[1]] : this._grammar[tokenParts[0]];
     return tokens[Math.floor(Math.random() * tokens.length)];
   }
 
