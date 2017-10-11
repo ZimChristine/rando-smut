@@ -6,17 +6,17 @@ import { GeneratorService } from './generator';
   selector: 'erotic-fiction',
   template: `
     <div id="fiction">{{smut}}</div>
-    <button (click)="_updateSmut()">More please</button>
+    <button (click)="updateSmut()">More please</button>
   `
 })
 export class FictionComponent {
   public smut: string;
 
   constructor(private _fictionGenerator: GeneratorService) {
-    this._updateSmut();
+    this.updateSmut();
   }
 
-  private _updateSmut() {
+  public updateSmut() {
     this.smut = this._fictionGenerator.getSmut();
   }
 };
