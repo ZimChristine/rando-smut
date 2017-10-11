@@ -8,9 +8,11 @@ export class ParserService {
   public constructor(@Inject(GrammarInjectable) private _grammar: object) {}
 
   private _getFromGrammar(token: string): string {
-    console.log('token', token);
-    const tokenParts = token.split('-');
-    const tokens = tokenParts.length === 2 ? this._grammar[tokenParts[0]][tokenParts[1]] : this._grammar[tokenParts[0]];
+    const tokenParts: Array<string> = token.split('-');
+    let tokens: any = this._grammar[tokenParts.shift()];
+    while (tokenParts.length) {
+      tokens = tokens[tokenParts.shift()];
+    }
     return tokens[Math.floor(Math.random() * tokens.length)];
   }
 
@@ -28,6 +30,7 @@ export class ParserService {
       } else if (/[\]>]/.test(char)) {
         const newToken = new Token(TokenType.BNF, chunk, char == ']');
         tokens.push(newToken);
+        console.log(`Parse\tToken: ${newToken.value}\tTerminal: ${newToken.bnfTerminal}`);
         if (!newToken.bnfTerminal) {
           newToken.components = this._tokeniseText(this._getFromGrammar(chunk));
         }

@@ -1,32 +1,51 @@
 import { InjectionToken } from '@angular/core';
 
 export const appVocabulary: object = {
-  orifice: ['hole', 'meat sandwich', 'gammon flaps', 'tunnel of love', 'Hobbit Hole'],
   adjective: {
-    general: ['remarkable', 'glorious', 'surprisingly furry'],
-    openDesirous: ['gaping', 'wanton', 'covetous', 'impatient', 'cavernous'],
+    general: ['remarkable', 'glorious', 'surprisingly furry', 'precocious', 'finger lickin\'', 'wanton'],
+    bodypart: {
+      generic: ['slender', 'exquisite'],
+      orifice: ['gaping', 'wanton', 'chafed', 'covetous', 'impatient', 'cavernous', 'inviting', 'unremarkable but available', 'heavily bleached'],
+    },
   },
-  adverb: ['roughly', 'gayly'],
+  sexyBanter: [''],
+  endearment: ['bitch'],
+  adverb: {
+    act: ['roughly', 'gayly', 'left-handedly', 'expertly', 'spasmodically', 'unceasingly', 'fiendishly', 'dispassoinately', 'vigorously', 'feverishly'],
+    speech: ['coquettishly', 'huskily', '(amplified by a Tuba)'],
+  },
   superlative: {
-    singular: ['truly extraordinary', 'earth-shattering'],
+    singular: ['a truly extraordinary', 'an earth-shattering'],
     plural: [],
   },
-  preface: ['With great effort,', 'Hanging from the ceiling,'],
+  preface: ['With great effort,', 'Hanging from the ceiling,', 'With a wink and two fingers of gin,', 'Cracking open a much-loved book,', 'Leaning back, sighing deeply,'],
+  addendum: ['and stroking a previously unseen guinea pig,'],
   inserted: ['forced', 'pounded'],
   orgasm: ['orgasm'],
+  bodypart: {
+    orifice: ['hole', 'meat sandwich', 'gammon flaps', 'tunnel of love', 'Hobbit Hole'],
+    penis: [
+      'bellend',
+      'warm, crusty love baguette',
+      'beef baton',
+      'flesh of mankind', /* https://inews.co.uk/essentials/culture/books/my-dad-wrote-a-porno-podcast-interview/ */
+      'felonious dong',
+      'average-sized but nevertheless pleasing penis',   
+    ]
+  },
   insertable: {
     singular: [
-      'flesh of mankind' /* https://inews.co.uk/essentials/culture/books/my-dad-wrote-a-porno-podcast-interview/ */,
-      'felonious dong',
-      'average-sized but nevertheless pleasing penis',
       'staff',
       'supple 11 inch wand of holly with a phoenix feather core',
+      'Dick King Smith',
+      'TV remote with a condom on it',
+      '(hopefully splinter-free) broom handle',
     ],
     plural: [
       'felonious dongs',
       'average-sized but nevertheless pleasing penises',
-      'staves',
       'supple 11 inch wands of holly with a phoenix feather core',
+      'lubricated porcelain dolls',
     ],
   },
   furniture: [
@@ -35,6 +54,11 @@ export const appVocabulary: object = {
     'armoire',
     'chaise longue',
     'slightly wobbly IKEA coffee table (LACK)'
+  ],
+  funtimez: [
+    'fuckfest',
+    'trip to Paris with panties down',
+    'session of afternoon delight',
   ]
 };
 
