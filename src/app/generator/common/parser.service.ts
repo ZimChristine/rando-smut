@@ -5,11 +5,7 @@ import { appGrammar, GrammarInjectable } from './content/grammar';
 
 @Injectable()
 export class ParserService {
-  private _grammar: object;
-
-  public constructor(@Inject(GrammarInjectable) grammar: object) {
-    this._grammar = grammar;
-  }
+  public constructor(@Inject(GrammarInjectable) private _grammar: object) {}
 
   private _getFromGrammar(token: string): string {
     const tokens = this._grammar[token];
