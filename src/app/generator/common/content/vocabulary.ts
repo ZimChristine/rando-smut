@@ -6,7 +6,9 @@ export const appVocabulary: object = {
     bodypart: {
       superlative: ['finest', 'tastiest'],
       generic: ['slender', 'delectable', 'exquisite', 'ladylike'],
-      orifice: ['gaping', 'delectable', 'tight', 'greedy', 'resplendent', 'virginal', 'wanton', 'chafed', 'covetous', 'impatient', 'cavernous', 'inviting', 'unremarkable but available', 'heavily bleached'],
+      orifice: ['gaping', 'delectable', 'tight', 'greedy', 'resplendent', 'virginal',
+        'wanton', 'chafed', 'covetous', 'impatient', 'cavernous', 'inviting', 'unremarkable but available',
+        'heavily bleached', 'warm', 'lubricated'],
     },
   },
   sexyBanter: ['Teach me how to make the finest houmous', 'Take me to the Vulcan Academy of Love'],
@@ -51,7 +53,7 @@ export const appVocabulary: object = {
     past: ['forced', 'inserted', 'plunged', 'rammed', 'thrust', 'eased', 'slid'],
   },
   clothing: {
-    item: ['Lion King dressing gown'],
+    item: ['Lion King dressing gown', 'gardening trousers', 'thermal underwear', 'swimwear'],
   },
 
   /*

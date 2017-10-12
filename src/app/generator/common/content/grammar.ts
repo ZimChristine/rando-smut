@@ -14,6 +14,7 @@ export const appGrammar: object = {
   addendum: ['[addendum]', 'and clutching two [insertable-plural],', 'and pounding [adverb-pleasure] on a xylophone,'],
   sexyBanter: [
     `[sexyBanter].`,
+    `Toss me on the <furniture> and rip off my <clothing-item>!`,
     `I long to make your <bodypart-orifice> mine.`,
     `Tell me how you want it, <endearment-phrase>.`,
     `Before this night is over, you will beg for my <insertable-singular>. If you're lucky, I might give it to you. Are you feeling lucky, <endearment-word>?`,
