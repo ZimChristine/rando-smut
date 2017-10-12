@@ -12,7 +12,7 @@ import { appGrammar, GrammarInjectable } from './generator/common/content/gramma
 
 import { AppComponent } from './app.component';
 import { FictionComponent, TextingAdviceComponent } from './erotic-content';
-import { Error404Component } from './pages';
+import { Error404Component, HomeComponent } from './pages';
 
 import { routes } from './routes';
 
@@ -22,6 +22,7 @@ import { routes } from './routes';
     FictionComponent,
     TextingAdviceComponent,
     Error404Component,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
