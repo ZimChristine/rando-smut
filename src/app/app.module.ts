@@ -14,8 +14,6 @@ import { AppComponent } from './app.component';
 import { FictionComponent, TextingAdviceComponent } from './erotic-content';
 import { Error404Component, HomeComponent } from './pages';
 
-import { routes } from './routes';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +24,6 @@ import { routes } from './routes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
   ],
   providers: [
     GeneratorService,
