@@ -25,6 +25,8 @@ Many symbols are namespaced (e.g. the symbol `<insert-past>` will resolve to the
 
 The grammar and vocabulary are not well organised. Any efforts to organise them sensibly would be highly welcome.
 
+RandoSmut does not currently handle any invalid content: it will simply throw. When you create new content, simply run `npm test` which includes a test for all sentences and all symbols in the grammar. If all the tests pass then you have added no invalid content (of course, it doesn't whether or not new content is comprehensible).
+
 #### An example
 
 The sentence:
