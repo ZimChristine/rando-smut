@@ -20,7 +20,7 @@ npm start
 
 ## Roadmap
 
-[Contributions](contributing.md) are particularly welcomed in the following areas:
+[Contributions](CONTRIBUTING.md) are particularly welcomed in the following areas:
 
 1. [x] Set up skeleton files and tests for generator;
 2. [x] Implement working generator;
