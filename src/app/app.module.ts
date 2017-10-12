@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { GeneratorService } from './generator/generator.service';
 import { ParserService } from './generator/common/parser.service';
@@ -11,15 +12,20 @@ import { appGrammar, GrammarInjectable } from './generator/common/content/gramma
 
 import { AppComponent } from './app.component';
 import { FictionComponent, TextingAdviceComponent } from './erotic-content';
+import { Error404Component } from './pages';
+
+import { routes } from './routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     FictionComponent,
     TextingAdviceComponent,
+    Error404Component,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [
     GeneratorService,
