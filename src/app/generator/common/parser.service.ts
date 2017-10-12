@@ -11,7 +11,13 @@ export class ParserService {
     const tokenParts: Array<string> = token.split('-');
     let tokens: any = this._grammar[tokenParts.shift()];
     while (tokenParts.length) {
+      if (tokens === undefined) {
+        throw new Error(`Parsing error: could not resolve symbol ${token}`);
+      }
       tokens = tokens[tokenParts.shift()];
+    }
+    if (tokens === undefined) {
+      throw new Error(`Parsing error: could not resolve symbol ${token}`);
     }
     return tokens[Math.floor(Math.random() * tokens.length)];
   }
@@ -30,7 +36,6 @@ export class ParserService {
       } else if (/[\]>]/.test(char)) {
         const newToken = new Token(TokenType.BNF, chunk, char == ']');
         tokens.push(newToken);
-        console.log(`Parse\tToken: ${newToken.value}\tTerminal: ${newToken.bnfTerminal}`);
         if (!newToken.bnfTerminal) {
           newToken.components = this._tokeniseText(this._getFromGrammar(chunk));
         }

@@ -11,7 +11,13 @@ export class CompilerService {
     const tokenParts: Array<string> = token.split('-');
     let tokens: any = this._vocab[tokenParts.shift()];
     while (tokenParts.length) {
+      if (tokens === undefined) {
+        throw new Error(`Sentence compilation error: could not resolve symbol ${token}`);
+      }
       tokens = tokens[tokenParts.shift()];
+    }
+    if (tokens === undefined) {
+      throw new Error(`Sentence compilation error: could not resolve symbol ${token}`);
     }
     return tokens[Math.floor(Math.random() * tokens.length)];
   }
@@ -23,7 +29,6 @@ export class CompilerService {
         return acc + token.value;
       }
       if (token.bnfTerminal) {
-        console.log(`Compile: \t Token: ${token.value}`);
         return acc + this._getFromVocab(token.value);
       }
       // Recursive step -- Non-terminal BNF
