@@ -5,5 +5,7 @@ import { Error404Component, HomeComponent } from './pages';
 
 export const routes: Routes = [
   { path: '404', component: Error404Component },
-  { path: '', component: HomeComponent },
+  { path: 'erotica', component: HomeComponent },
+  { path: 'rando-smut', redirectTo: '/erotica' },
+  { path: '', redirectTo: '/erotica', pathMatch: 'full' },
 ];
