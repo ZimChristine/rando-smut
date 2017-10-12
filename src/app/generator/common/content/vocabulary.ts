@@ -47,6 +47,7 @@ export const appVocabulary: object = {
     past: ['fucked', 'pounded', 'rammed', 'deflowered', 'penetrated', 'pleasured', 'tamed', 'rode'],
   },
   insert: {
+    present: ['forcing', 'inserting', 'plunging', 'ramming', 'thrusting', 'easing', 'sliding'],
     past: ['forced', 'inserted', 'plunged', 'rammed', 'thrust', 'eased', 'slid'],
   },
   clothing: {

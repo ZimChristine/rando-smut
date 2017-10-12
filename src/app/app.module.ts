@@ -11,11 +11,13 @@ import { appGrammar, GrammarInjectable } from './generator/common/content/gramma
 
 import { AppComponent } from './app.component';
 import { FictionComponent } from './fiction.component';
+import { TextingAdviceComponent } from './texting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FictionComponent,
+    TextingAdviceComponent,
   ],
   imports: [
     BrowserModule

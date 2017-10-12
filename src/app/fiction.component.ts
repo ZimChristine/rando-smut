@@ -5,9 +5,10 @@ import { GeneratorService } from './generator';
 @Component({
   selector: 'erotic-fiction',
   template: `
-    <div id="fiction">{{smut}}</div>
+    <div class="content" id="fiction">{{smut}}</div>
     <button (click)="updateSmut()">More please</button>
-  `
+  `,
+  styleUrls: ['./content.styles.css']
 })
 export class FictionComponent {
   public smut: string;

@@ -19,6 +19,7 @@ export const appGrammar: object = {
     `Before this night is over, you will beg for my <insertable-singular>. If you're lucky, I might give it to you. Are you feeling lucky, <endearment-word>?`,
   ],
   insert: {
+    present: ['[insert-present]', '[adverb-pleasure] [insert-present]'],
     past: ['[insert-past]', '[adverb-pleasure] [insert-past]'],
   },
   insertable: {
