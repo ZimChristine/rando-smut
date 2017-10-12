@@ -11,7 +11,7 @@ The content produced by RandoSmut is intended to shock, dismay, entertain, appal
 
 ## Using RandoSmut
 
-The latest build is available on [GitHub pages](https://p-wm.github.io/rando-smut/), but if you wish to run it locally all you need is a classic:
+The latest build is available on [GitHub pages](http://bit.ly/rando-smut), but if you wish to run it locally all you need is a classic:
 
 ```
 npm install
