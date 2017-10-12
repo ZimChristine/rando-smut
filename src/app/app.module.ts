@@ -10,8 +10,7 @@ import { appVocabulary, VocabInjectable } from './generator/common/content/vocab
 import { appGrammar, GrammarInjectable } from './generator/common/content/grammar';
 
 import { AppComponent } from './app.component';
-import { FictionComponent } from './fiction.component';
-import { TextingAdviceComponent } from './texting.component';
+import { FictionComponent, TextingAdviceComponent } from './erotic-content';
 
 @NgModule({
   declarations: [

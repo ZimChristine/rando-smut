@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { GeneratorService } from './generator';
+import { GeneratorService } from '../generator';
 
 @Component({
   selector: 'erotic-fiction',
