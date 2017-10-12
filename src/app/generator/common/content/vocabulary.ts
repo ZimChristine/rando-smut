@@ -2,26 +2,36 @@ import { InjectionToken } from '@angular/core';
 
 export const appVocabulary: object = {
   adjective: {
-    general: ['remarkable', 'glorious', 'surprisingly furry', 'precocious', 'finger lickin\'', 'wanton'],
+    general: ['remarkable', 'glorious', 'surprisingly furry', 'precocious', 'finger lickin\'', 'wanton', 'turgid'],
     bodypart: {
-      generic: ['slender', 'exquisite'],
-      orifice: ['gaping', 'wanton', 'chafed', 'covetous', 'impatient', 'cavernous', 'inviting', 'unremarkable but available', 'heavily bleached'],
+      generic: ['slender', 'exquisite', 'ladylike'],
+      orifice: ['gaping', 'tight', 'greedy', 'virginal', 'wanton', 'chafed', 'covetous', 'impatient', 'cavernous', 'inviting', 'unremarkable but available', 'heavily bleached'],
     },
   },
-  sexyBanter: [''],
+  sexyBanter: ['Teach me how to make the finest houmous.'],
   endearment: ['bitch'],
+  fuck: {
+    past: ['fucked', 'pounded', 'rammed', 'deflowered', 'penetrated'],
+  },
   adverb: {
-    act: ['roughly', 'gayly', 'left-handedly', 'expertly', 'spasmodically', 'unceasingly', 'fiendishly', 'dispassoinately', 'vigorously', 'feverishly'],
+    pleasure: ['roughly', 'gayly', 'left-handedly', 'expertly', 'spasmodically', 'unceasingly', 'fiendishly', 'dispassionately', 'vigorously', 'feverishly'],
     speech: ['coquettishly', 'huskily', '(amplified by a Tuba)'],
   },
   superlative: {
     singular: ['a truly extraordinary', 'an earth-shattering'],
     plural: [],
   },
-  preface: ['With great effort,', 'Hanging from the ceiling,', 'With a wink and two fingers of gin,', 'Cracking open a much-loved book,', 'Leaning back, sighing deeply,'],
+  preface: [
+    'With great effort,',
+    'Hanging from the ceiling,',
+    'With a wink and two fingers of gin,',
+    'Cracking open a much-loved book,',
+    'Leaning back, sighing deeply,',
+    'Wearing only suspenders and a top hat,'
+  ],
   addendum: ['and stroking a previously unseen guinea pig,'],
-  inserted: ['forced', 'pounded'],
-  orgasm: ['orgasm'],
+  inserted: ['forced', 'pounded', 'plunged', 'rammed', 'thrust'],
+  orgasm: ['orgasm', 'ecstasy'],
   bodypart: {
     orifice: ['hole', 'meat sandwich', 'gammon flaps', 'tunnel of love', 'Hobbit Hole'],
     penis: [
@@ -38,7 +48,7 @@ export const appVocabulary: object = {
       'staff',
       'supple 11 inch wand of holly with a phoenix feather core',
       'Dick King Smith',
-      'TV remote with a condom on it',
+      'condom-topped Ketchup bottle',
       '(hopefully splinter-free) broom handle',
     ],
     plural: [
@@ -57,7 +67,7 @@ export const appVocabulary: object = {
   ],
   funtimez: [
     'fuckfest',
-    'trip to Paris with panties down',
+    'panties-down Paris trip',
     'session of afternoon delight',
   ]
 };
