@@ -11,7 +11,11 @@ export const appVocabulary: object = {
         'heavily bleached', 'warm', 'lubricated'],
     },
   },
-  sexyBanter: ['Teach me how to make the finest houmous', 'Take me to the Vulcan Academy of Love'],
+  sexyBanter: [
+    'Teach me how to make the finest houmous',
+    'Take me to the Vulcan Academy of Love',
+    'I want to say up all night with you, taking quizzes from magazines and talking about pesto',
+  ],
   endearment: ['bitch', 'daddy', 'babe', 'sexy ass mothafucka', 'shawty'],
   adverb: {
     pleasure: ['roughly', 'gayly', 'left-handedly', 'expertly', 'spasmodically', 'unceasingly', 'fiendishly', 'dispassionately', 'vigorously', 'feverishly'],
@@ -75,6 +79,7 @@ export const appVocabulary: object = {
   /* ---OBJECTS---*/
   insertable: {
     singular: [
+      'eggplant',
       'staff',
       'supple 11 inch wand of holly with a phoenix feather core',
       'Dick King Smith',

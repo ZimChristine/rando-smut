@@ -19,7 +19,7 @@ export const appSentences: Array<string> = [
     She <fuck-past> him <adverb-pleasure> with her <insertable-singular>, possessing his <bodypart-orifice> completely.
     He clearly needed training, but he was still the <adjective-bodypart-superlative> <endearment-word> she'd ever come across.
     She took his <bodypart-random> in her hands and <adverb-pleasure> tweaked him to <superlative-singular> <orgasm>.
-    "<sexyBanter>" she <adverb-speech> informed him, releasing her grasp.
+    "<sexyBanter>" she <adverb-speech> begged of him, releasing her grasp.
   `
 ];
 
