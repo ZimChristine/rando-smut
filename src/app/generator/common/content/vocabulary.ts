@@ -2,17 +2,15 @@ import { InjectionToken } from '@angular/core';
 
 export const appVocabulary: object = {
   adjective: {
-    general: ['remarkable', 'glorious', 'surprisingly furry', 'precocious', 'finger lickin\'', 'wanton', 'turgid'],
+    general: ['remarkable', 'glorious',  'delectable', 'resplendent', 'surprisingly furry', 'precocious', 'finger lickin\'', 'wanton', 'turgid'],
     bodypart: {
-      generic: ['slender', 'exquisite', 'ladylike'],
-      orifice: ['gaping', 'tight', 'greedy', 'virginal', 'wanton', 'chafed', 'covetous', 'impatient', 'cavernous', 'inviting', 'unremarkable but available', 'heavily bleached'],
+      superlative: ['finest', 'tastiest'],
+      generic: ['slender', 'delectable', 'exquisite', 'ladylike'],
+      orifice: ['gaping', 'delectable', 'tight', 'greedy', 'resplendent', 'virginal', 'wanton', 'chafed', 'covetous', 'impatient', 'cavernous', 'inviting', 'unremarkable but available', 'heavily bleached'],
     },
   },
-  sexyBanter: ['Teach me how to make the finest houmous.'],
-  endearment: ['bitch'],
-  fuck: {
-    past: ['fucked', 'pounded', 'rammed', 'deflowered', 'penetrated'],
-  },
+  sexyBanter: ['Teach me how to make the finest houmous', 'Take me to the Vulcan Academy of Love'],
+  endearment: ['bitch', 'daddy', 'babe', 'sexy ass mothafucka', 'shawty'],
   adverb: {
     pleasure: ['roughly', 'gayly', 'left-handedly', 'expertly', 'spasmodically', 'unceasingly', 'fiendishly', 'dispassionately', 'vigorously', 'feverishly'],
     speech: ['coquettishly', 'huskily', '(amplified by a Tuba)'],
@@ -30,10 +28,38 @@ export const appVocabulary: object = {
     'Wearing only suspenders and a top hat,'
   ],
   addendum: ['and stroking a previously unseen guinea pig,'],
-  inserted: ['forced', 'pounded', 'plunged', 'rammed', 'thrust'],
+  funtimez: [
+    'fuckfest',
+    'panties-down Paris trip',
+    'session of afternoon delight',
+  ],
+
+  /*
+    VERBS
+  */
+  react: {
+    past: ['writhed', 'moaned', 'quivered'],
+  },
+  squirt: {
+    past: ['oozed', 'dribbled', 'sprayed', 'pumped', 'ejected', 'gushed'],
+  },
+  fuck: {
+    past: ['fucked', 'pounded', 'rammed', 'deflowered', 'penetrated', 'pleasured', 'tamed', 'rode'],
+  },
+  insert: {
+    past: ['forced', 'inserted', 'plunged', 'rammed', 'thrust', 'eased', 'slid'],
+  },
+  clothing: {
+    item: ['Lion King dressing gown'],
+  },
+
+  /*
+    NOUNS
+  */
+  /* ---PERSONAL---*/
   orgasm: ['orgasm', 'ecstasy'],
   bodypart: {
-    orifice: ['hole', 'meat sandwich', 'gammon flaps', 'tunnel of love', 'Hobbit Hole'],
+    orifice: ['hole', 'meat sandwich', 'gammon flaps', 'tunnel of love', 'Hobbit Hole', 'pudendum'],
     penis: [
       'bellend',
       'warm, crusty love baguette',
@@ -43,6 +69,7 @@ export const appVocabulary: object = {
       'average-sized but nevertheless pleasing penis',   
     ]
   },
+  /* ---OBJECTS---*/
   insertable: {
     singular: [
       'staff',
@@ -52,7 +79,6 @@ export const appVocabulary: object = {
       '(hopefully splinter-free) broom handle',
     ],
     plural: [
-      'felonious dongs',
       'average-sized but nevertheless pleasing penises',
       'supple 11 inch wands of holly with a phoenix feather core',
       'lubricated porcelain dolls',
@@ -65,11 +91,13 @@ export const appVocabulary: object = {
     'chaise longue',
     'slightly wobbly IKEA coffee table (LACK)'
   ],
-  funtimez: [
-    'fuckfest',
-    'panties-down Paris trip',
-    'session of afternoon delight',
-  ]
+  fluid: [
+    'semen',
+    'lovejuice',
+    'jism',
+    'spaff',
+    'delicious caesar dressing',
+  ],
 };
 
 export const VocabInjectable = new InjectionToken<object>('appVocabulary');
